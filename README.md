@@ -15,8 +15,9 @@ http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata
 * If the player rolls a spare or strike in the 10th frame, he can roll the extra balls for free, but not more then 10 balls.
 
 ## Scoring Example
-
+```
 +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
 | 1 |4| 4 |5| 6 |/| 5 |/|   | | 0 |1| 7 |/| 6 |/|   | |2|/|6|
 |  5  |  14 |  29 |  49 |  60 |  61 |  77 |  97 | 117 | 133 |
 +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+```

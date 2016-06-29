@@ -10,4 +10,16 @@ import Foundation
 
 class Game {
     
+    var totalScore = 0
+    var rolls = Array(repeating: 0, count: 21)
+    var currentRoll = 0
+
+    func roll(pinsDown: Int) {
+        rolls.insert(pinsDown, at: currentRoll)
+    }
+    
+    func score() -> Int {
+        return rolls.reduce(0, combine: +)
+    }
+    
 }

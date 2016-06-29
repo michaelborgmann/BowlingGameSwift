@@ -11,6 +11,8 @@ import XCTest
 
 class Bowling_Game_KataTests: XCTestCase {
     
+    let game = Game()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,16 +23,18 @@ class Bowling_Game_KataTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGameKnockingDownZeroPinsHasZeroPoints() {
+        for _ in 1...20 {
+            game.roll(pinsDown: 0)
+        }
+        XCTAssertEqual(game.score(), 0)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGameAlwaysWithOnePinKnockedDownHasTwentyPoints() {
+        for _ in 1...20 {
+            game.roll(pinsDown: 1)
         }
+        XCTAssertEqual(game.score(), 20)
     }
     
 }
